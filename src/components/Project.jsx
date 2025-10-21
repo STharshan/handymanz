@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronsLeft, ChevronsRight } from 'lucide-react';
+
 
 const ProjectShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(1); // 👈 Start with second project
@@ -176,14 +177,14 @@ const ProjectShowcase = () => {
                 disabled={activeIndex === 0}
                 className="bg-white hover:bg-gray-200 disabled:bg-gray-600 disabled:cursor-not-allowed p-2 sm:p-3 rounded transition-colors"
               >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
+                <ChevronsLeft className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
               </button>
               <button
                 onClick={handleNext}
                 disabled={activeIndex === projects.length - 1}
                 className="bg-white hover:bg-gray-200 disabled:bg-gray-600 disabled:cursor-not-allowed p-2 sm:p-3 rounded transition-colors"
               >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
+                <ChevronsRight className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
               </button>
             </div>
           </div>
