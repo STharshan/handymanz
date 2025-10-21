@@ -131,7 +131,7 @@ const ProjectShowcase = () => {
 
     return (
         <div className="min-h-screen bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto p-6">
                 {/* Header Section */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
                     <div>
