@@ -236,7 +236,7 @@ const ProjectShowcase = () => {
                                             {project.category}
                                         </span>
                                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
-                                        <p className={`text-gray-300 text-xs sm:text-sm leading-relaxed transition-all duration-500 line-clamp-3 ${index === activeIndex ? 'opacity-100' : 'opacity-70'
+                                        <p className={`text-white text-xs sm:text-sm leading-relaxed transition-all duration-500 line-clamp-3 ${index === activeIndex ? 'opacity-100' : 'opacity-70'
                                             }`}>
                                             {project.snippet}
                                         </p>
