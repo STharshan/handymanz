@@ -145,13 +145,28 @@ const ProjectShowcase = () => {
                     </div>
 
                     <div className="grid  items-center gap-3 sm:gap-4 mt-10">
-                        <button
-                            onClick={handlePrev}
-                            disabled={activeIndex === 0}
-                            className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded text-sm sm:text-base font-semibold transition-colors"
-                        >
-                            View Projects
-                        </button>
+<button
+  onClick={handlePrev}
+  disabled={activeIndex === 0}
+  className="
+    bg-orange-600 hover:bg-orange-700
+    disabled:bg-gray-700 disabled:cursor-not-allowed
+    text-white
+    w-40
+    px-4 py-3
+    rounded-md
+    text-sm
+    font-semibold
+    transition-all
+    duration-200
+    shadow-sm hover:shadow-md
+  "
+>
+  View Projects
+</button>
+
+
+
                         <div className="flex gap-2">
                             <button
                                 onClick={handlePrev}
@@ -203,8 +218,8 @@ const ProjectShowcase = () => {
                                 onClick={() => scrollToCard(index)}
                             >
                                 <div className={`relative rounded-lg overflow-hidden h-[360px] sm:h-[400px] md:h-[440px] lg:h-[480px] group transition-all duration-500 ${index === activeIndex
-                                        ? 'ring-2 sm:ring-4 ring-orange-600 shadow-2xl shadow-orange-600/30'
-                                        : 'ring-0 shadow-lg'
+                                    ? 'ring-2 sm:ring-4 ring-orange-600 shadow-2xl shadow-orange-600/30'
+                                    : 'ring-0 shadow-lg'
                                     }`}>
                                     <img
                                         src={project.image}
@@ -243,8 +258,8 @@ const ProjectShowcase = () => {
                                 key={index}
                                 onClick={() => scrollToCard(index)}
                                 className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${index === activeIndex
-                                        ? 'bg-orange-600 w-6 sm:w-8'
-                                        : 'bg-gray-600 w-1.5 sm:w-2 hover:bg-gray-500'
+                                    ? 'bg-orange-600 w-6 sm:w-8'
+                                    : 'bg-gray-600 w-1.5 sm:w-2 hover:bg-gray-500'
                                     }`}
                             />
                         ))}
