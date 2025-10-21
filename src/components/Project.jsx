@@ -156,7 +156,6 @@ const ProjectShowcase = () => {
               disabled={activeIndex === 3}
               className="
                 bg-orange-600 hover:bg-orange-700
-                disabled:bg-gray-700 disabled:cursor-not-allowed
                 text-white
                 w-40
                 px-4 py-3
