@@ -10,7 +10,7 @@ export default function HandymanHero() {
   }, []);
 
   return (
-    <header className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <header className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
@@ -23,7 +23,7 @@ export default function HandymanHero() {
       ></div>
 
       {/* Content container */}
-      <div className="relative max-w-6xl mx-auto z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="relative max-w-6xl mx-auto z-10 container px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-6rem)]">
 
           {/* Left column - Text content */}
@@ -59,7 +59,7 @@ export default function HandymanHero() {
               >
                 <div className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                   {/* Background sliding effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-orange-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
 
                   {/* Text content with flip animation */}
                   <span className="relative z-10 flex items-center gap-2">
@@ -104,8 +104,8 @@ export default function HandymanHero() {
                 className="w-full h-full object-cover object-center rounded-2xl transform transition-transform duration-700 "
               />
 
-              {/* Gradient overlay on image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent rounded-2xl"></div>
+              {/* linear overlay on image */}
+              <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 via-transparent to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>

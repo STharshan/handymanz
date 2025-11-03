@@ -59,7 +59,7 @@ export default function PartnersSection() {
               {allLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center px-8 sm:px-12 lg:px-16"
+                  className="shrink-0 flex items-center justify-center px-8 sm:px-12 lg:px-16"
                 >
                   <img
                     src={logo.url}

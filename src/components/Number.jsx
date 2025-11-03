@@ -63,7 +63,7 @@ export default function OurNumbers() {
                 {/* LEFT CONTENT */}
                 <div className="text-gray-900">
                     <div className="flex items-center gap-2 mb-3">
-                        <span className="w-6 h-[2px]" style={{ backgroundColor: ORANGE }} />
+                        <span className="w-6 h-0.5" style={{ backgroundColor: ORANGE }} />
                         <span className="text-sm font-semibold text-gray-800">
                             Our Numbers
                         </span>
