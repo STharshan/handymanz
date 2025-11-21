@@ -14,7 +14,7 @@ const AboutSection = () => {
 
           <div className="relative w-full max-w-md md:max-w-lg border-4 border-white shadow-lg rounded-xl overflow-hidden">
             <img
-              src="https://cdn.prod.website-files.com/66229f17735aec2fc3454631/6624eab0aadb32f3541f9b25_3558.webp"
+              src="/about.webp"
               alt="Craftsman at work"
               className="w-full h-auto object-cover"
             />
@@ -26,20 +26,17 @@ const AboutSection = () => {
           {/* Title */}
           <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
             <div className="w-12 h-1 bg-orange-600" />
-            <p className="text-sm font-semibold text-gray-800">About Us</p>
+            <p className="text-sm font-semibold text-gray-800">Our story</p>
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Crafting Homes, Building Trust: Discover Handymanz
+          <h2 className="text-2xl font-semibold text-gray-900 leading-tight mb-6">
+            We established in 2020 and have over 20 years of experience in the trade with a team of fully qualified technicians. Our backgrounds range from Honda, Vauxhall, Peugeot and Saab to many of the biggest aftermarket companies around.
           </h2>
 
           {/* Description */}
           <p className="text-gray-600 mb-8 text-base leading-relaxed">
-            Welcome to Handymanz, where craftsmanship meets convenience. With a
-            passion for excellence and a commitment to customer satisfaction,
-            Handymanz is your premier destination for all your home improvement
-            needs.
+           We are embedded into Nottinghamshire’s aftermarket and main dealer garage system and have great access to some of the best technical support there is to offer at very competitive rates.
           </p>
 
           {/* CTA Button */}

@@ -32,21 +32,21 @@ export default function HandymanHero() {
               }`}
           >
             {/* Sub title */}
-            <div className="inline-block mt-20">
+            {/* <div className="inline-block mt-20">
               <span className="text-orange-500 text-sm sm:text-base font-semibold tracking-wide uppercase">
                 Freelancer Portfolio
               </span>
-            </div>
+            </div> */}
 
             {/* Main heading */}
             <h1 className="text-5xl font-bold text-white leading-tight">
-              Your Home's Best Friend:{' '}
-              <span className="text-orange-500">Handymanz</span>
+
+              <span className="text-orange-500">ACG – Auto Centre</span>
             </h1>
 
             {/* Paragraph */}
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+              We are your local vehicle maintenance experts in Nottingham, carrying out a wide range of repair services at the best prices. Clutch & Gearbox, MOT repairs are our specialty 
             </p>
 
             {/* CTA Button */}

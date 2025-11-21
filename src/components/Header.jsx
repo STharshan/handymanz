@@ -43,12 +43,12 @@ const Header = () => {
             <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center md:justify-start px-6 py-2.5 gap-3 md:gap-6">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <span className="font-semibold text-sm">(123) 123-4567</span>
+                <span className="font-semibold text-sm">0115 6483 444</span>
               </div>
-              <div className="h-4 w-[1px] bg-white opacity-70 hidden md:block" />
+              <div className="h-4 w-px bg-white opacity-70 hidden md:block" />
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span className="font-semibold text-sm">example@gmail.com</span>
+                <span className="font-semibold text-sm"> tom@acgautocentre.co.uk</span>
               </div>
             </div>
           </div>
@@ -58,8 +58,8 @@ const Header = () => {
             <div className="max-w-7xl w-full flex items-center justify-center md:justify-end px-6 py-2.5">
               <div className="flex items-center gap-2 text-sm font-semibold">
                 <Clock size={16} />
-                <span className="hidden sm:inline">Mon - Fri 08:00 - 20:00 / Closed on Weekends</span>
-                <span className="sm:hidden">Mon - Fri 08:00 - 20:00</span>
+                <span className="hidden sm:inline">Mon - Fri 08:30 - 17:30 / Sat 09:00 - 13:00 /Closed on sunday</span>
+                <span className="sm:hidden">Mon - Fri 08:30 - 17:30</span>
               </div>
             </div>
           </div>
@@ -69,11 +69,11 @@ const Header = () => {
       {/* Main Navigation Bar */}
       <div className={`bg-white transition-shadow duration-300 ${scrolled ? 'shadow-lg' : 'shadow-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-2">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="flex items-center space-x-2">
-                <img src="logo.webp" alt="Handymanz Logo" className="h-10" />
+                <img src="logo.png" alt="Handymanz Logo" className="h-16 bg-black p-2 rounded-full" />
               </div>
             </div>
 
