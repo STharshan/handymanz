@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
                         What Our <span className="text-orange-500">Customers</span> Say
                     </h2>
                     <p className="text-[#868386] text-base mt-4 max-w-lg">
-                        At Ovi Car Body Repair, our mission is to deliver precision, passion
+                        At O, our mission is to deliver precision, passion
                         and perfection. Here’s what real customers have to say.
                     </p>
                 </div>
