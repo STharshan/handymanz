@@ -14,7 +14,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Flooring Makeover Project involved installing new flooring throughout the residential property owned by Mr. and Mrs. Garcia, enhancing durability and aesthetics.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662c016c84173d9135f61110_9315.webp",
+        "g1.webp",
       link: "/projects/flooring-makeover-project",
     },
     {
@@ -24,7 +24,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Fixture Fixer Operation aimed to repair and replace various fixtures in the commercial property of ABC Restaurant, ensuring a welcoming and functional environment for patrons.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662568969dc57b5340de5ffd_13144.avif",
+        "g2.webp",
       link: "/projects/fixture-fixer-operation",
     },
     {
@@ -34,7 +34,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Renovation Revamp Venture focused on transforming the outdated kitchen and bathrooms of the Johnson family's home, enhancing functionality and modernizing the living spaces.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/662567aee66b7f6a3358de7f_22162068.avif",
+        "g3.webp",
       link: "/projects/renovation-revamp-venture",
     },
     {
@@ -44,7 +44,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Carpentry Solutions Project aimed to provide customized carpentry solutions for the office renovation project of Ms. Rodriguez, adding functionality and aesthetic appeal to the workspace.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625676a94bb460b0cfa6b15_21271632.avif",
+        "g4.webp",
       link: "/projects/carpentry-solutions-project",
     },
     {
@@ -54,7 +54,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Electrical Upgrade Initiative focused on enhancing the electrical systems in the commercial space of XYZ Corporation, improving safety and efficiency.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625671e1b3394c91fee3bb9_2957.avif",
+        "h3.webp",
       link: "/projects/electrical-upgrade-initiative",
     },
     {
@@ -144,7 +144,7 @@ const ProjectShowcase = () => {
           <div>
             <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <div className="w-8 sm:w-12 h-0.5 bg-orange-600"></div>
-              <p className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Our Projects</p>
+              <p className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Portfolio</p>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Discover Our<br />Completed Projects
@@ -231,7 +231,7 @@ const ProjectShowcase = () => {
 
                   <div className="absolute inset-0 from-black via-black/60 to-transparent"></div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
+                  {/* <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
                     <span className="inline-block bg-orange-600 text-white text-[10px] sm:text-xs font-semibold px-3 py-1.5 rounded mb-2 sm:mb-3">
                       {project.category}
                     </span>
@@ -242,7 +242,7 @@ const ProjectShowcase = () => {
                     >
                       {project.snippet}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
