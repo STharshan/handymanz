@@ -71,7 +71,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 sm:mt-0 mt-7">
               <div className="flex items-center space-x-2">
                 <img src="logo.png" alt="Handymanz Logo" className="h-16 bg-black p-2 rounded-full" />
               </div>
@@ -104,7 +104,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-gray-800 focus:outline-none p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="lg:hidden mt-8 text-gray-800 focus:outline-none p-2 hover:bg-gray-100 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
