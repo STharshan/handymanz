@@ -7,6 +7,7 @@ import PartnersSection from "../components/Partner"
 import ProjectShowcase from "../components/Project"
 import ServicesSection from "../components/Service"
 import TestimonialsSection from '../components/Testimonial'
+import ContactSection from '../components/ContactSection'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <OurNumbers />
             <ProjectShowcase />
             <TestimonialsSection />
+            <ContactSection />
             <FindUs />
         </div>
     )
