@@ -5,7 +5,7 @@ const TermsConditions = () => {
   return (
     <section className="bg-black text-white mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
-              <h1 className="text-3xl font-semibold text-center mb-6 mt-15">Website Terms of Use</h1>
+              <h1 className="text-3xl font-semibold text-center mb-6 mt-28">Website Terms of Use</h1>
               <p className="text-center text-gray-200">Last updated: 09/09/25</p>
 
               <div className="mt-8 space-y-6">
