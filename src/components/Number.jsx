@@ -65,20 +65,20 @@ export default function OurNumbers() {
                     <div className="flex items-center gap-2 mb-3">
                         <span className="w-6 h-0.5" style={{ backgroundColor: ORANGE }} />
                         <span className="text-sm font-semibold text-gray-800">
-                            Our Numbers
+                            Get to know us
                         </span>
                     </div>
 
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                        Count on Handymanz: Our <br />
-                        Accomplishments in Numbers
+                        Meet Tom, the founder
                     </h2>
 
                     <p className="mt-4 text-gray-600 max-w-lg">
-                        Numbers are the testament to our commitment and proficiency at
-                        Handymanz. With decades of collective experience, our team has
-                        successfully accomplished thousands of projects, earning the trust
-                        and satisfaction of countless homeowners.
+                        I completed my mechanical apprenticeship over 20 years ago at Godfrey Davies Peugeot, Nottingham. I then went on to work for Honda, receiving some of the best technical training the industry has to offer.
+
+
+
+Several years later, I found myself working for some of the biggest aftermarket companies, Halfords Autocentres and Kiwk Fit.
                     </p>
 
                     <div className="mt-10 grid grid-cols-2 gap-8 sm:gap-10 text-">
@@ -116,7 +116,7 @@ export default function OurNumbers() {
                         <div className="absolute -top-6 -right-26 w-full h-180 bg-orange-500 rounded-xl -z-10"></div>
 
                         <img
-                            src="a1.webp"
+                            src="about.webp"
                             alt="Craftsman at work"
                             className="w-full h-auto rounded-xl shadow-lg object-cover border-4 border-white"
                         />

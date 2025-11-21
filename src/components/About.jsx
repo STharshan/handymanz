@@ -14,7 +14,7 @@ const AboutSection = () => {
 
           <div className="relative w-full max-w-md md:max-w-lg border-4 border-white shadow-lg rounded-xl overflow-hidden">
             <img
-              src="/about.webp"
+              src="/a1.webp"
               alt="Craftsman at work"
               className="w-full h-auto object-cover"
             />
