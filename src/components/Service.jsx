@@ -8,37 +8,37 @@ const ServicesSection = () => {
     {
       title: "MOT",
       description: "Our MOT service ensures your vehicle meets legal safety and environmental standards. We offer thorough testing and provide a detailed report of any required repairs.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256c8ecfd7c7000c93cd09_35154%20(1).avif",
+      image: "h2.webp",
       link: "/product/cleaning-service"
     },
     {
       title: "Wheel alignment and tracking",
       description: "Our wheel alignment and tracking service optimizes your vehicle's handling and tire wear. We adjust your wheels to factory specifications, ensuring smoother driving and improved fuel efficiency.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256bb3d06cde3819a751f9_1389.avif",
+      image: "w2.webp",
       link: "/product/renovation-consultation"
     },
     {
       title: "Services",
       description: "Our comprehensive repair services cover a wide range of household needs, including plumbing, electrical work, drywall repairs, and door/window maintenance.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256b0314219906161f2492_2075.avif",
+      image: "w1.webp",
       link: "/product/general-repairs"
     },
     {
       title: "Clutch",
       description: "Our clutch service ensures smooth gear shifting and optimal performance. We repair or replace faulty clutches to keep your vehicle’s transmission working seamlessly.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256a8e0cb85f935360a323_2037.jpg",
+      image: "c1.webp",
       link: "/product/carpentry-customization"
     },
     {
       title: "Gear box",
       description: "Our gearbox service covers repair and replacement of faulty gearboxes. We diagnose and fix issues such as slipping gears or difficulty shifting to maintain your car’s transmission performance.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256a3be66b7f6a335ad723_17130.avif",
+      image: "g1.webp",
       link: "/product/electrical-installation"
     },
         {
       title: "Diagnostics",
       description: "Our diagnostic service uses advanced tools to identify issues with your vehicle's engine, electrical systems, and more. We provide accurate troubleshooting to ensure timely repairs.",
-      image: "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/66256a3be66b7f6a335ad723_17130.avif",
+      image: "d1.webp",
       link: "/product/electrical-installation"
     },
   ];

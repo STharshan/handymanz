@@ -18,7 +18,7 @@ export default function HandymanHero() {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{
-          backgroundImage: "url('/hero.avif')"
+          backgroundImage: "url('/hero.webp')"
         }}
       ></div>
 
@@ -46,7 +46,7 @@ export default function HandymanHero() {
 
             {/* Paragraph */}
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl">
-              We are your local vehicle maintenance experts in Nottingham, carrying out a wide range of repair services at the best prices. Clutch & Gearbox, MOT repairs are our specialty 
+              We are your local vehicle maintenance experts in Nottingham, carrying out a wide range of repair services at the best prices. Clutch & Gearbox, MOT repairs are our specialty
             </p>
 
             {/* CTA Button */}
@@ -99,7 +99,7 @@ export default function HandymanHero() {
 
               {/* Main image */}
               <img
-                src="/hero.avif"
+                src="/h3.webp"
                 alt="Professional handyman workers"
                 className="w-full h-full object-cover object-center rounded-2xl transform transition-transform duration-700 "
               />

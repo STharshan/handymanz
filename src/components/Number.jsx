@@ -116,7 +116,7 @@ export default function OurNumbers() {
                         <div className="absolute -top-6 -right-26 w-full h-180 bg-orange-500 rounded-xl -z-10"></div>
 
                         <img
-                            src="number.webp"
+                            src="a1.webp"
                             alt="Craftsman at work"
                             className="w-full h-auto rounded-xl shadow-lg object-cover border-4 border-white"
                         />
