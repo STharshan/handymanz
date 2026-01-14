@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-white overflow-hidden py-20">
+    <section id="about" className="relative bg-white overflow-hidden py-20 scroll-m-20">
       {/* 🔶 Orange Background (left side on large, full on mobile) */}
       <div className="absolute inset-0 md:inset-y-0 md:left-0 md:w-2/5 bg-orange-600 -z-10 transition-all duration-500" />
 
@@ -41,7 +41,7 @@ const AboutSection = () => {
 
           {/* CTA Button */}
           <a
-            href="/about"
+           
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-md transition-all duration-300 shadow-md"
           >
             Learn More

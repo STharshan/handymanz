@@ -19,7 +19,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                //href="https://www.facebook.com/people/RS-Mobile-Services/100092690151352/"
+                href="https://www.facebook.com/ACGAutoCentre/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

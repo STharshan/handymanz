@@ -1,5 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export default function HandymanHero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +12,7 @@ export default function HandymanHero() {
   }, []);
 
   return (
-    <header className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
+    <header id='home' className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
@@ -51,39 +53,29 @@ export default function HandymanHero() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <a
-                href="/contact"
+              <HashLink
+                smooth
+                to="/#services"
                 className="relative inline-block group"
                 onMouseEnter={() => setButtonHover(true)}
                 onMouseLeave={() => setButtonHover(false)}
               >
                 <div className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                  {/* Background sliding effect */}
-                  <div className="absolute inset-0 bg-linear-to-r from-orange-600 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-
-                  {/* Text content with flip animation */}
+                  {/* Text and Arrow */}
                   <span className="relative z-10 flex items-center gap-2">
-                    <span className="inline-block text-base sm:text-lg">
-                      <span className={`inline-block transition-all duration-300 ${buttonHover ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'}`}>
-                        View Our Services
-                      </span>
-                      <span className={`absolute left-0 top-0 transition-all duration-300 ${buttonHover ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}>
-                        Go To Services
-                      </span>
+                    <span className={`inline-block transition-all duration-300 ${buttonHover ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'}`}>
+                      View Our Services
                     </span>
-                    <ArrowRight
-                      className={`transition-all duration-300 ${buttonHover ? 'translate-x-1 scale-110' : 'translate-x-0 scale-100'}`}
-                      size={20}
-                    />
+                    <span className={`absolute left-0 top-0 transition-all duration-300 ${buttonHover ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}>
+                      Go To Services
+                    </span>
+                    <ArrowRight className={`transition-all duration-300 ${buttonHover ? 'translate-x-1 scale-110' : 'translate-x-0 scale-100'}`} size={20} />
                   </span>
-
-                  {/* Ripple effect on hover */}
-                  <span className={`absolute inset-0 rounded-lg border-2 border-white transition-all duration-500 ${buttonHover ? 'scale-110 opacity-0' : 'scale-100 opacity-0'}`}></span>
                 </div>
 
                 {/* Glow effect */}
                 <div className={`absolute inset-0 rounded-lg bg-orange-500 blur-xl transition-opacity duration-300 ${buttonHover ? 'opacity-50' : 'opacity-0'} -z-10`}></div>
-              </a>
+              </HashLink>
             </div>
           </div>
 

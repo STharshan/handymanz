@@ -1,1 +1,236 @@
 @import "tailwindcss";
+
+
+/* =========================================
+   Base + Smooth Theme Transitions
+========================================= */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+
+  /* Light defaults (brand) */
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions app-wide */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* =========================================
+   BRAND TOKENS (used by ServicesSection)
+   - Cards, rings, shadows, surfaces
+========================================= */
+:root {
+  /* Surfaces & text */
+  --brand-bg: #F7F8FA;          /* page background */
+  --brand-bgSoft: #F0F2F5;      /* section background */
+  --brand-text: #0F172A;        /* headings/body on light */
+  --brand-muted: #475569;       /* subtle text */
+
+  /* Cards & borders */
+  --card-bg: #FFFFFF;
+  --brand-border: #E5E7EB;
+
+  /* Accent color family */
+  --brand-green: #2F7D33;         /* primary accent */
+  --brand-greenSoft: #E8F3EC;     /* icon chip bg */
+
+  /* Shadows (safe defaults) */
+  --shadow-green: 0 10px 24px rgba(47, 125, 51, 0.15);
+  --hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+html.dark {
+  /* Surfaces & text */
+  --brand-bg: #0B0F0C;
+  --brand-bgSoft: #0F1411;
+  --brand-text: #E5E7EB;
+  --brand-muted: #A3A3A3;
+
+  /* Cards & borders */
+  --card-bg: #121212;
+  --brand-border: rgba(255, 255, 255, 0.12);
+
+  /* Accent color family */
+  --brand-green: #6EE7B7;         /* brighter green in dark */
+  --brand-greenSoft: rgba(110, 231, 183, 0.12);
+
+  /* Shadows */
+  --shadow-green: 0 10px 24px rgba(110, 231, 183, 0.20);
+  --hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.40);
+}
+
+/* ------------------------------
+   AIRCON — tokens
+---------------------------------*/
+:root {
+  --aircon-primary: #2F7D33;
+  --aircon-grad-top: #EAF5EA;
+  --aircon-grad-bottom: #FFFFFF;
+  --aircon-heading: #111827;
+  --aircon-muted: #374151;
+  --aircon-badge-bg: #A4BE6A;
+  --aircon-badge-text: #1F2A10;
+  --aircon-outline: rgba(17, 24, 39, 0.15);
+  --aircon-button-bg: #FFFFFF;
+
+  /* Global page surface + text for light mode */
+  --aircon-bg: #F9FAFB;
+  --aircon-text: #111827;
+}
+
+html.dark {
+  --aircon-grad-top-dark: #1A1F1A;
+  --aircon-grad-bottom-dark: #0C0F0C;
+  --aircon-heading: #E5E7EB;
+  --aircon-muted: #A3A3A3;
+  --aircon-badge-bg: rgba(164, 190, 106, 0.2);
+  --aircon-badge-text: #D1FAE5;
+  --aircon-outline: rgba(255, 255, 255, 0.15);
+  --aircon-button-bg: #1F2937;
+
+  /* Global page surface + text for dark mode */
+  --aircon-bg: #0B0F0C;
+  --aircon-text: #E5E7EB;
+}
+
+/* ------------------------------
+   AIRCON — Services / Why Service
+---------------------------------*/
+:root {
+  --aircon-section-bg: #FFFFFF;
+  --aircon-icon: #6AA874;
+  --aircon-icon-bg: #E8F3EC;
+  --aircon-check-icon: #2E7D32;
+  --aircon-card-bg: #F5F5F5;
+  --aircon-card-border: #E5E7EB;
+}
+
+html.dark {
+  --aircon-section-bg: #0B0F0C;
+  --aircon-icon: #A4EBC5;
+  --aircon-icon-bg: rgba(106, 168, 116, 0.1);
+  --aircon-check-icon: #6EE7B7;
+  --aircon-card-bg: #121212;
+  --aircon-card-border: rgba(255, 255, 255, 0.12);
+}
+
+/* ------------------------------
+   MOT — tokens
+---------------------------------*/
+:root {
+  --mot-primary: #2F7D33;
+  --mot-grad-top: #EAF5EA;
+  --mot-grad-bottom: #FFFFFF;
+  --mot-heading: #111827;
+  --mot-muted: #374151;
+  --mot-badge-bg: #A4BE6A;
+  --mot-badge-text: #1F2A10;
+  --mot-outline-border: rgba(17, 24, 39, 0.15);
+  --mot-button-bg: #FFFFFF;
+}
+
+html.dark {
+  --mot-grad-top-dark: #1A1F1A;
+  --mot-grad-bottom-dark: #0C0F0C;
+  --mot-heading: #E5E7EB;
+  --mot-muted: #A3A3A3;
+  --mot-badge-bg: rgba(164, 190, 106, 0.2);
+  --mot-badge-text: #D1FAE5;
+  --mot-outline-border: rgba(255, 255, 255, 0.15);
+  --mot-button-bg: #1F2937;
+}
+
+/* ------------------------------
+   AUTOMOTIVE — tokens
+---------------------------------*/
+:root {
+  --auto-section-bg: #FFFFFF;
+  --auto-heading: #111827;
+  --auto-muted: #4B5563;
+  --auto-icon: #6AA874;
+  --auto-icon-bg: #E8F3EC;
+  --auto-check-icon: #2E7D32;
+  --auto-card-bg: #F5F5F5;
+  --auto-card-border: #E5E7EB;
+}
+
+html.dark {
+  --auto-section-bg: #0B0F0C;
+  --auto-heading: #E5E7EB;
+  --auto-muted: #A3A3A3;
+  --auto-icon: #A4EBC5;
+  --auto-icon-bg: rgba(106, 168, 116, 0.1);
+  --auto-check-icon: #6EE7B7;
+  --auto-card-bg: #121212;
+  --auto-card-border: rgba(255, 255, 255, 0.12);
+}
+
+/* ------------------------------
+   Optional helpers (use in JSX)
+   (purely utility; keep if handy)
+---------------------------------*/
+.aircon-surface { background: var(--aircon-bg); color: var(--aircon-text); }
+.section-surface { background: var(--aircon-section-bg); }
+.card-surface    { background: var(--aircon-card-bg); border: 1px solid var(--aircon-card-border); }
+.auto-card       { background: var(--auto-card-bg); border: 1px solid var(--auto-card-border); }
+.heading-color   { color: var(--auto-heading); }
+.muted-color     { color: var(--auto-muted); }
+
+/* Example gradient helpers (optional) */
+.aircon-grad-light {
+  background: linear-gradient(180deg, var(--aircon-grad-top) 0%, var(--aircon-grad-bottom) 100%);
+}
+.dark .aircon-grad-dark {
+  background: linear-gradient(180deg, var(--aircon-grad-top-dark, #0f0f0f) 0%, var(--aircon-grad-bottom-dark, #000000) 100%);
+}
+.mot-grad-light {
+  background: linear-gradient(180deg, var(--mot-grad-top) 0%, var(--mot-grad-bottom) 100%);
+}
+.dark .mot-grad-dark {
+  background: linear-gradient(180deg, var(--mot-grad-top-dark, #0f0f0f) 0%, var(--mot-grad-bottom-dark, #000000) 100%);
+}
+
+/* =========== WHEEL / TYRE HERO TOKENS =========== */
+:root {
+  --wheel-page-bg: #FFFFFF;
+  --wheel-grad-top: #EAF5EA;
+  --wheel-grad-bottom: #FFFFFF;
+  --wheel-heading: #111827;
+  --wheel-muted: #374151;
+  --wheel-primary: #2F7D33;
+  --wheel-badge-bg: #A4BE6A;
+  --wheel-badge-text: #1F2A10;
+  --wheel-outline: rgba(17, 24, 39, 0.15);
+  --wheel-button-bg: #FFFFFF;
+  --wheel-button-hover: #F9FAFB;
+}
+
+html.dark {
+  --wheel-page-bg: #0B0F0C;
+  --wheel-grad-top: #121512;
+  --wheel-grad-bottom: #0B0F0C;
+  --wheel-heading: #E5E7EB;
+  --wheel-muted: #A3A3A3;
+  --wheel-primary: #6EE7B7;
+  --wheel-badge-bg: rgba(110, 231, 183, 0.18);
+  --wheel-badge-text: #D1FAE5;
+  --wheel-outline: rgba(255, 255, 255, 0.18);
+  --wheel-button-bg: #1F2937;
+  --wheel-button-hover: #111827;
+}
+
+/* =========== GRADIENT CLASS =========== */
+.wheel-grad {
+  background-image: linear-gradient(to bottom, var(--wheel-grad-top), var(--wheel-grad-bottom));
+}
+
+/* Optional Utility Helpers */
+.wheel-surface { background: var(--wheel-page-bg); color: var(--wheel-heading); }

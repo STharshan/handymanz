@@ -52,7 +52,7 @@ const ServicesSection = () => {
   }, [animatingWords.length]);
 
   return (
-    <section className="bg-black text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section id='services' className="bg-black text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
