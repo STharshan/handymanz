@@ -62,7 +62,7 @@ export default function AirConHero() {
 
             {/* Get Quote Button */}
             <a
-              href="/contact"
+              href="/#contact"
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
               style={{
                 backgroundColor: "#FFF7ED", // orange-50

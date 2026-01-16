@@ -42,7 +42,7 @@ export default function EmergencyCTA() {
 
           {/* Book Gearbox Repair Button */}
           <a
-            href="/contact"
+            href="/#contact"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-colors"
             style={{
               backgroundColor: "transparent",

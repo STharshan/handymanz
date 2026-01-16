@@ -3,6 +3,15 @@ import { FaFacebookF, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const services = [
+    { name: "MOT", link: "/mot" },
+    { name: "Wheel alignment and tracking", link: "/wheel-alignment" },
+    { name: "Services", link: "/service" },
+    { name: "Clutch", link: "/clutch" },
+    { name: "Gear box", link: "/gearbox" },
+    { name: "Diagnostics", link: "/diagnostic" },
+  ];
+
   return (
     <footer className="bg-black border-t border-gray-800 py-12">
       <div className="container mx-auto px-4 md:px-12">
@@ -38,18 +47,14 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2 text-gray-400">
-              {[
-                "MOT",
-                "Wheel alignment and tracking",
-                "Services",
-                "Clutch",
-                "Gear box",
-                "Diagnostics",
-              ].map((service, index) => (
+              {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="hover:text-white transition-colors duration-300">
-                    {service}
-                  </a>
+                  <Link
+                    to={service.link}
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -103,7 +108,6 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
-          {/* Left: Terms & Privacy */}
           <div className="flex gap-4 text-sm">
             <Link
               to="/terms"
@@ -120,7 +124,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Center: Powered by Ansely (unchanged) */}
           <p className="text-center font-semibold text-gray-400">
             Powered by{" "}
             <a
