@@ -18,11 +18,11 @@ export default function EmergencyCTA() {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Book Your MOT with Confidence
+          Book Your Service with Confidence
         </h2>
 
         <p className="text-xl mb-8 opacity-90">
-          DVSA-approved MOT testing carried out by experienced, qualified technicians
+          DVSA-approved Service carried out by experienced, qualified technicians
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -42,7 +42,7 @@ export default function EmergencyCTA() {
 
           {/* Book MOT Button */}
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-colors"
             style={{
               backgroundColor: "transparent",
@@ -58,7 +58,7 @@ export default function EmergencyCTA() {
               e.currentTarget.style.color = palette.fgOnPrimary;
             }}
           >
-            Book MOT Test
+            Book Your Service
           </a>
         </div>
       </div>

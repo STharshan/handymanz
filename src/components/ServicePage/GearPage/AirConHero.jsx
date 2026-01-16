@@ -19,7 +19,7 @@ export default function AirConHero() {
               color: "#9A3412", // orange-800
             }}
           >
-            Professional MOT Services
+            Professional Gearbox Services
           </span>
 
           {/* Heading */}
@@ -27,9 +27,9 @@ export default function AirConHero() {
             className="text-4xl lg:text-5xl font-black mb-6"
             style={{ color: "#7C2D12" }} // orange-900
           >
-            MOT Testing{" "}
+            Gearbox Repair {" "}
             <span style={{ color: "#F97316" }}>
-              & Repairs
+              & Replacement
             </span>
           </h1>
 
@@ -38,10 +38,7 @@ export default function AirConHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#9A3412" }} // orange-800
           >
-            Reliable and DVSA-compliant MOT testing to ensure your vehicle meets
-            all legal safety and environmental standards. Our experienced
-            technicians carry out thorough inspections and provide clear, honest
-            advice—keeping you safe and road-legal.
+           Expert gearbox diagnostics, repairs, and replacements to ensure smooth, reliable power transmission. Our experienced technicians accurately identify gearbox faults and provide effective solutions to restore performance and drivability.
           </p>
 
           {/* CTA Buttons */}

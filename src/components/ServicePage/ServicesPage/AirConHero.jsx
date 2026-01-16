@@ -19,7 +19,7 @@ export default function AirConHero() {
               color: "#9A3412", // orange-800
             }}
           >
-            Professional MOT Services
+            Professional Vehicle Services
           </span>
 
           {/* Heading */}
@@ -27,10 +27,7 @@ export default function AirConHero() {
             className="text-4xl lg:text-5xl font-black mb-6"
             style={{ color: "#7C2D12" }} // orange-900
           >
-            MOT Testing{" "}
-            <span style={{ color: "#F97316" }}>
-              & Repairs
-            </span>
+            Reliable Automotive Care You Can Trust
           </h1>
 
           {/* Subheading */}
@@ -38,10 +35,7 @@ export default function AirConHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#9A3412" }} // orange-800
           >
-            Reliable and DVSA-compliant MOT testing to ensure your vehicle meets
-            all legal safety and environmental standards. Our experienced
-            technicians carry out thorough inspections and provide clear, honest
-            advice—keeping you safe and road-legal.
+            At ACG – Auto Centre, we provide a full range of professional vehicle services to keep your car safe, reliable, and performing at its best. From routine maintenance to complex mechanical repairs, our experienced technicians deliver high-quality workmanship at competitive prices.
           </p>
 
           {/* CTA Buttons */}

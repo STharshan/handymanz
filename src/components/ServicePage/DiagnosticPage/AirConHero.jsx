@@ -19,7 +19,7 @@ export default function AirConHero() {
               color: "#9A3412", // orange-800
             }}
           >
-            Professional MOT Services
+            Professional Vehicle Diagnostics
           </span>
 
           {/* Heading */}
@@ -27,9 +27,9 @@ export default function AirConHero() {
             className="text-4xl lg:text-5xl font-black mb-6"
             style={{ color: "#7C2D12" }} // orange-900
           >
-            MOT Testing{" "}
+           Advanced Fault Finding {" "}
             <span style={{ color: "#F97316" }}>
-              & Repairs
+              & System Checks
             </span>
           </h1>
 
@@ -38,10 +38,7 @@ export default function AirConHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#9A3412" }} // orange-800
           >
-            Reliable and DVSA-compliant MOT testing to ensure your vehicle meets
-            all legal safety and environmental standards. Our experienced
-            technicians carry out thorough inspections and provide clear, honest
-            advice—keeping you safe and road-legal.
+           Accurate vehicle diagnostics using advanced computer-based equipment to identify faults quickly and efficiently. Our diagnostic service helps pinpoint engine, electrical, and system issues—saving time, reducing costs, and preventing future breakdowns.
           </p>
 
           {/* CTA Buttons */}

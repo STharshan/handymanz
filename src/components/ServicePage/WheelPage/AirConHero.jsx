@@ -13,13 +13,13 @@ export default function AirConHero() {
         <div className="text-center mb-12">
           {/* Badge */}
           <span
-            className="inline-flex mt-30 items-center justify-center rounded-md px-2 py-0.5 text-xs font-medium mb-4"
+            className="inline-flex mt-30 items-center justify-center rounded-md px-2 py-1 text-xs font-medium mb-4"
             style={{
               backgroundColor: "#FED7AA", // orange-200
               color: "#9A3412", // orange-800
             }}
           >
-            Professional MOT Services
+            Professional Vehicle Alignment & Tracking
           </span>
 
           {/* Heading */}
@@ -27,9 +27,9 @@ export default function AirConHero() {
             className="text-4xl lg:text-5xl font-black mb-6"
             style={{ color: "#7C2D12" }} // orange-900
           >
-            MOT Testing{" "}
+            Wheel Alignment{" "}
             <span style={{ color: "#F97316" }}>
-              & Repairs
+              & Tracking Services
             </span>
           </h1>
 
@@ -38,10 +38,7 @@ export default function AirConHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#9A3412" }} // orange-800
           >
-            Reliable and DVSA-compliant MOT testing to ensure your vehicle meets
-            all legal safety and environmental standards. Our experienced
-            technicians carry out thorough inspections and provide clear, honest
-            advice—keeping you safe and road-legal.
+            Precision vehicle alignment and tracking services using advanced laser and 3D technology. We ensure your wheels are correctly aligned to manufacturer specifications for safer handling, reduced tyre wear, and improved fuel efficiency.
           </p>
 
           {/* CTA Buttons */}
