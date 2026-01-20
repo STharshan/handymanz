@@ -29,15 +29,12 @@ export default function PartnersSection() {
 
   // Partner logos array (duplicated for seamless loop)
   const logos = [
-    { url: '/l1.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d9e5_logo-9.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d9aa_logo-2.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d9f8_logo-3.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d9be_logo-8.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d983_logo-5.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f5f111852acb0e9d94b_logo-4.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d9a3_logo-7.svg', width: 200 },
-    { url: 'https://cdn.prod.website-files.com/66229f17735aec2fc3454631/66251f60111852acb0e9d965_logo-1.svg', width: 200 },
+    { url: '/t1.webp', width: 200 },
+    { url: '/t2.webp', width: 200 },
+    { url: '/t3.webp', width: 200 },
+    { url: '/t4.webp', width: 200 },
+    { url: '/t5.webp', width: 200 },
+    { url: '/t6.webp', width: 200 },
   ];
 
   // Duplicate logos for seamless infinite scroll
@@ -65,7 +62,7 @@ export default function PartnersSection() {
                     src={logo.url}
                     alt={`Partner logo ${index + 1}`}
                     style={{ width: `${logo.width}px` }}
-                    className="h-auto max-w-full opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    className="h-auto max-w-full rounded-2xl transition-opacity duration-300"
                     loading="lazy"
                   />
                 </div>

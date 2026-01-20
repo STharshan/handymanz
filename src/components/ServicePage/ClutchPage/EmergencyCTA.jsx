@@ -42,7 +42,8 @@ export default function EmergencyCTA() {
 
           {/* Book Clutch Repair Button */}
           <a
-            href="/#contact"
+            href="https://wa.me/94774279433"
+            target="_blank"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-colors"
             style={{
               backgroundColor: "transparent",

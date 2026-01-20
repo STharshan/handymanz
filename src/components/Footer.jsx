@@ -81,7 +81,7 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-orange-500" size={18} />
                 <a
-                  href="tel:0775 236 4546"
+                  href="tel:+447752364546"
                   className="hover:text-white transition-colors duration-300"
                 >
                   0775 236 4546

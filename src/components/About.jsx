@@ -39,13 +39,6 @@ const AboutSection = () => {
            We are embedded into Nottinghamshire’s aftermarket and main dealer garage system and have great access to some of the best technical support there is to offer at very competitive rates.
           </p>
 
-          {/* CTA Button */}
-          <a
-           
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-md transition-all duration-300 shadow-md"
-          >
-            Learn More
-          </a>
         </div>
       </div>
     </section>

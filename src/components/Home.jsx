@@ -12,7 +12,7 @@ export default function HandymanHero() {
   }, []);
 
   return (
-    <header id='home' className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
+    <header id='/' className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 

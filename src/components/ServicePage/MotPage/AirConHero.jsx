@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function AirConHero() {
   return (
@@ -47,7 +47,12 @@ export default function AirConHero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             {/* Call Button */}
-            <a href="tel:+441623623759" className="inline-block">
+            <a
+              href="https://wa.me/447752364546"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
               <button
                 className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300 hover:scale-105"
                 style={{
@@ -55,8 +60,8 @@ export default function AirConHero() {
                   color: "#FFFFFF",
                 }}
               >
-                <FaPhoneAlt className="h-5 w-5" />
-                Book Service: +44 1623 623 759
+                <FaWhatsapp className="h-5 w-5" />
+                Book an Appoinment
               </button>
             </a>
 
@@ -78,7 +83,7 @@ export default function AirConHero() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              Get Free Quote
+              Get A Quote
             </a>
           </div>
         </div>

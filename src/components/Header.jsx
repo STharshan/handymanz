@@ -40,7 +40,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", link: "/#home" },
+    { name: "Home", link: "/#" },
     { name: "About", link: "/#about" },
     {
       name: "Services",
@@ -69,15 +69,19 @@ const Header = () => {
         <div className="flex flex-col md:flex-row w-full">
           <div className="flex-1 bg-orange-500 text-white flex justify-center md:justify-start">
             <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center md:justify-start px-6 py-2.5 gap-3 md:gap-6">
-              <div className="flex items-center gap-2">
+              <a 
+                href="tel:+447752364546"
+                className="flex items-center gap-2">
                 <Phone size={16} />
-                <span className="font-semibold text-sm">0115 6483 444</span>
-              </div>
+                <span className="font-semibold text-sm">+44 775 236 4546</span>
+              </a>
               <div className="h-4 w-px bg-white opacity-70 hidden md:block" />
-              <div className="flex items-center gap-2">
+              <a 
+                href="mailto: tom@acgautocentre.co.uk"
+                className="flex items-center gap-2">
                 <Mail size={16} />
-                <span className="font-semibold text-sm">tom@acgautocentre.co.uk</span>
-              </div>
+                <span className="font-semibold text-sm hover:text-gray-200">tom@acgautocentre.co.uk</span>
+              </a>
             </div>
           </div>
           <div className="flex-1 bg-black text-white flex justify-center md:justify-end">
