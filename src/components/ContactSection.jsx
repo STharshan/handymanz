@@ -67,9 +67,8 @@ export default function ContactSection() {
                             <div>
                                 <h3 className="text-[24px] font-medium text-black dark:text-white mb-2 transition-colors">Hours</h3>
                                 <div className="text-[16px] text-gray-700 dark:text-gray-300 space-y-1 transition-colors">
-                                    <p>Monday - Thuresday: 8:30 AM - 5:30 PM</p>
-                                    <p>Friday: 8:30 AM - 5:30 AM</p>
-                                    <p>Saturday: 9:00 AM - 3:00 AM</p>
+                                    <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                                    <p>Saturday: 9:00 AM - 3:00 PM</p>
                                     <p>Sunday: Closed</p>
                                 </div>
                             </div>
