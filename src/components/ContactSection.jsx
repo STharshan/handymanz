@@ -118,7 +118,7 @@ export default function ContactSection() {
                                             : field === "email"
                                                 ? "your@email.com"
                                                 : field === "phone"
-                                                    ? "(555) 123-4567"
+                                                    ? "Your phone number"
                                                     : "Tell us about your dent removal needs...",
                                     className:
                                         "w-full px-4 py-3 text-[16px] border border-[#E0E0E0] dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-black dark:focus:ring-white outline-none resize-none text-black dark:text-gray-200 bg-white dark:bg-gray-700 transition-colors",

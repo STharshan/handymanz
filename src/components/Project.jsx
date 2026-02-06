@@ -14,7 +14,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Flooring Makeover Project involved installing new flooring throughout the residential property owned by Mr. and Mrs. Garcia, enhancing durability and aesthetics.",
       image:
-        "g1.webp",
+        "Acg 2.jpg",
       link: "/projects/flooring-makeover-project",
     },
     {
@@ -24,7 +24,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Fixture Fixer Operation aimed to repair and replace various fixtures in the commercial property of ABC Restaurant, ensuring a welcoming and functional environment for patrons.",
       image:
-        "g2.webp",
+        "ACG 3.jpg",
       link: "/projects/fixture-fixer-operation",
     },
     {
@@ -34,7 +34,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Renovation Revamp Venture focused on transforming the outdated kitchen and bathrooms of the Johnson family's home, enhancing functionality and modernizing the living spaces.",
       image:
-        "g3.webp",
+        "ACG 4.jpg",
       link: "/projects/renovation-revamp-venture",
     },
     {
@@ -44,7 +44,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Carpentry Solutions Project aimed to provide customized carpentry solutions for the office renovation project of Ms. Rodriguez, adding functionality and aesthetic appeal to the workspace.",
       image:
-        "g4.webp",
+        "ACG 5.jpg",
       link: "/projects/carpentry-solutions-project",
     },
     {
@@ -54,7 +54,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Electrical Upgrade Initiative focused on enhancing the electrical systems in the commercial space of XYZ Corporation, improving safety and efficiency.",
       image:
-        "h3.webp",
+        "ACG 6.jpg",
       link: "/projects/electrical-upgrade-initiative",
     },
     {
@@ -64,7 +64,27 @@ const ProjectShowcase = () => {
       snippet:
         "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
       image:
-        "https://cdn.prod.website-files.com/66229f17735aec2fc3454650/6625654d4f070cbfab060858_256.avif",
+        "ACG 7.jpg",
+      link: "/projects/plumbing-rescue-mission",
+    },
+       {
+      id: "7",
+      title: "Plumbing Rescue Mission",
+      category: "Plumbing Projects",
+      snippet:
+        "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
+      image:
+        "ACG 9.jpg",
+      link: "/projects/plumbing-rescue-mission",
+    },
+       {
+      id: "8",
+      title: "Plumbing Rescue Mission",
+      category: "Plumbing Projects",
+      snippet:
+        "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
+      image:
+        "acg11.jpg",
       link: "/projects/plumbing-rescue-mission",
     },
   ];

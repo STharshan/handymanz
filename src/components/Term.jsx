@@ -77,7 +77,7 @@ const TermsConditions = () => {
                           If you have any questions about these Terms of Use, please contact us:
                       </p>
                       <div className="text-white">
-                          <p><strong>ACG Autocentre</strong></p>
+                          <p><strong>ACG Auto Centre</strong></p>
                           <p>Email: <a href="mailto:tom@acgautocentre.co.uk" className="text-orange-500 hover:underline">tom@acgautocentre.co.uk</a></p>
                           <p>Phone: 0775 236 4546</p>
                           <p>Address: 20 Little Tennis Street, Nottingham, NG2 4EL, United Kingdom</p>
