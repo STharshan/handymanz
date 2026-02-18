@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -103,7 +102,7 @@ export default function Footer() {
 
         {/* Bottom Divider */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 ACG Auto Centre. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ACG Auto Centre. All rights reserved.</p>
         </div>
 
         {/* Bottom Bar */}

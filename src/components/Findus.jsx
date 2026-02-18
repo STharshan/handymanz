@@ -1,18 +1,5 @@
-// src/components/FindUs.jsx
-"use client";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function FindUs() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: "ease-in-out",
-    });
-  }, []);
 
   return (
     <section

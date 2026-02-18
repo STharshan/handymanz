@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronsLeft, ChevronsRight } from 'lucide-react';
 
 
 const ProjectShowcase = () => {
-  const [activeIndex, setActiveIndex] = useState(1); // 👈 Start with second project
+  const [activeIndex, setActiveIndex] = useState(1); // Start with second project
   const scrollContainerRef = useRef(null);
 
   const projects = [
@@ -138,7 +138,7 @@ const ProjectShowcase = () => {
 
     container.addEventListener('scroll', handleScroll);
 
-    // 👇 Automatically show second project on load
+    // Automatically show second project on load
     setTimeout(() => scrollToCard(1), 200);
 
     return () => container.removeEventListener('scroll', handleScroll);
@@ -251,18 +251,6 @@ const ProjectShowcase = () => {
 
                   <div className="absolute inset-0 from-black via-black/60 to-transparent"></div>
 
-                  {/* <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
-                    <span className="inline-block bg-orange-600 text-white text-[10px] sm:text-xs font-semibold px-3 py-1.5 rounded mb-2 sm:mb-3">
-                      {project.category}
-                    </span>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
-                    <p
-                      className={`text-white text-xs sm:text-sm leading-relaxed transition-all duration-500 line-clamp-3 ${index === activeIndex ? 'opacity-100' : 'opacity-70'
-                        }`}
-                    >
-                      {project.snippet}
-                    </p>
-                  </div> */}
                 </div>
               </div>
             ))}

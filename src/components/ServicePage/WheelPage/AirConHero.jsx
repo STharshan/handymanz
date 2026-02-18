@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function AirConHero() {
   return (

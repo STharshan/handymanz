@@ -1,7 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState, useEffect } from "react";
 
 const testimonials = [
     {
@@ -44,15 +41,7 @@ Tom and his colleague were both incredibly welcome and offered unmatched and eff
 const TestimonialsSection = () => {
     const [paused, setPaused] = useState(false);
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            easing: "ease-out-cubic",
-            once: false,
-        });
-    }, []);
-
-    // ⭐ Smooth Scroll Function
+    // smooth Scroll Function
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -71,9 +60,8 @@ const TestimonialsSection = () => {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
-            {/* 🔥 Glow */}
 
-            {/* ⭐ Header */}
+            {/* Header */}
             <div
                 className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-14"
                 data-aos="fade-up"
@@ -91,7 +79,7 @@ const TestimonialsSection = () => {
                     </p>
                 </div>
 
-                {/* ⭐ UPDATED BUTTON WITH SCROLL */}
+                {/* UPDATED BUTTON WITH SCROLL */}
                 <button
                     onClick={() => scrollToSection("contact")}
                     data-aos="zoom-in"

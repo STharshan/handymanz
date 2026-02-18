@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function PartnersSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,21 +70,6 @@ export default function PartnersSection() {
             </div>
           </div>
         </div>
-
-        {/* Alternative: Grid layout for mobile (uncomment if preferred) */}
-        {/* <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 items-center justify-items-center lg:hidden">
-          {logos.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <img
-                src={logo.url}
-                alt={`Partner logo ${index + 1}`}
-                style={{ width: `${logo.width}px` }}
-                className="h-auto max-w-full opacity-60 hover:opacity-100 transition-opacity duration-300"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div> */}
       </div>
 
       <style jsx>{`

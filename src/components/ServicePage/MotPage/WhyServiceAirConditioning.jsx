@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 const WhyServiceAirConditioning = () => {
@@ -84,7 +81,6 @@ const WhyServiceAirConditioning = () => {
               </ul>
             </div>
           </div>
-          {/* End Right Column */}
         </div>
       </div>
     </section>

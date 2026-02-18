@@ -1,5 +1,3 @@
-// File: EmergencyCTA.jsx
-import React from "react";
 import { FaPhone } from "react-icons/fa";
 
 const palette = {

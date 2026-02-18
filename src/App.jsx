@@ -1,4 +1,9 @@
+import { useEffect } from "react"; // 1. Import useEffect
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos";             // 2. Import AOS JS
+import "aos/dist/aos.css";         // 3. Import AOS CSS
+
+// Pages and Components
 import Home from "./page/Home";
 import Footer from "./components/Footer";
 import TermsConditions from "./components/Term";
@@ -14,6 +19,15 @@ import Clutch from "./page/ServicePage/Clutch";
 import Diagnostic from "./page/ServicePage/Diagnostic";
 
 function App() {
+  // 4. Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true,     // Whether animation should happen only once - while scrolling down
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />

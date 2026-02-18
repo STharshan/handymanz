@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -72,26 +71,6 @@ export default function ContactSection() {
                                     <p>Sunday: Closed</p>
                                 </div>
                             </div>
-
-                            {/* Payment */}
-                            {/* <div>
-                                <h3 className="text-[24px] font-medium text-black dark:text-white mb-3 transition-colors">
-                                    Payment Methods
-                                </h3>
-                                <div className="flex flex-wrap gap-3">
-                                    {["Google Pay", "PayPal", "Visa"].map((method) => (
-                                        <span
-                                            key={method}
-                                            className="px-3 py-1 text-sm rounded-full bg-[#F5F5F5] dark:bg-gray-700 text-black dark:text-gray-200 border border-[#E0E0E0] dark:border-gray-600 transition-colors"
-                                        >
-                                            {method}
-                                        </span>
-                                    ))}
-                                </div>
-                                <p className="text-[14px] text-gray-700 dark:text-gray-300 mt-2 transition-colors">
-                                    Contactless payments available
-                                </p>
-                            </div> */}
                         </div>
                     </div>
 

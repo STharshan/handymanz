@@ -1,13 +1,12 @@
-import React from "react";
 
 const AboutSection = () => {
   return (
     <section id="about" className="relative bg-white overflow-hidden py-20 scroll-m-20">
-      {/* 🔶 Orange Background (left side on large, full on mobile) */}
+      {/* Orange Background (left side on large, full on mobile) */}
       <div className="absolute inset-0 md:inset-y-0 md:left-0 md:w-2/5 bg-orange-600 -z-10 transition-all duration-500" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
-        {/* 🖼️ Image Section */}
+        {/* Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center md:justify-start">
           {/* Orange Border Behind Image */}
           <div className="absolute -top-6 -left-26 w-[90%] md:w-[95%] h-[110%] bg-orange-600 rounded-xl -z-10"></div>
@@ -21,7 +20,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* 🧱 Content Section */}
+        {/* Content Section */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           {/* Title */}
           <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
