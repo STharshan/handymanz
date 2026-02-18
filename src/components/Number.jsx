@@ -22,7 +22,7 @@ export default function OurNumbers() {
                     animateCount("team", 4);
                 }
             },
-            { threshold: 0.4 }
+            { threshold: 0.3 }
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);
@@ -49,116 +49,128 @@ export default function OurNumbers() {
     return (
         <section
             ref={sectionRef}
-            className="relative overflow-hidden bg-white py-20"
+            className="relative overflow-hidden bg-white"
         >
-            {/* Orange background right side */}
+            {/* Orange background — full on mobile, right portion on desktop */}
             <div
-                className="absolute top-0 right-0 h-full w-full lg:w-[68%] -z-10"
+                className="absolute top-0 right-0 h-full w-full lg:w-[60%] -z-10"
                 style={{ backgroundColor: ORANGE }}
             />
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 grid grid-cols-1 lg:grid-cols-2 items-center gap-16 relative z-10">
-                {/* LEFT CONTENT */}
-                <div className="text-gray-900">
-                    <div className="flex items-center gap-2 mb-3">
-                        <span className="w-6 h-0.5" style={{ backgroundColor: ORANGE }} />
-                        <span className="text-sm font-semibold text-gray-800">
-                            Get to know us
-                        </span>
-                    </div>
+            <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
 
-                    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                        Meet Tom, the founder
-                    </h2>
+                    {/* ── LEFT CONTENT ── */}
+                    <div className="text-gray-900">
 
-                    <p className="mt-4 text-gray-600 max-w-lg">
-                        I completed my mechanical apprenticeship over 20 years ago at Godfrey Davies Peugeot, Nottingham. I then went on to work for Honda, receiving some of the best technical training the industry has to offer.
-                    </p>
-
-                    <div className="mt-10 grid grid-cols-2 gap-8 sm:gap-10">
-                        <CounterBlock
-                            value={counts.experience}
-                            symbol="+"
-                            label="Years of Experience"
-                            description="Delivering trusted and professional services with decades of industry expertise."
-                            color={ORANGE}
-                        />
-                        <CounterBlock
-                            value={counts.projects}
-                            symbol="+"
-                            label="Completed Projects"
-                            description="Successfully completed projects across diverse clients and requirements."
-                            color={ORANGE}
-                        />
-                        <CounterBlock
-                            value={counts.clients}
-                            symbol="+"
-                            label="Total Clients"
-                            description="Serving a growing base of satisfied clients with reliable solutions."
-                            color={ORANGE}
-                        />
-                        <CounterBlock
-                            value={counts.team}
-                            label="Team Members"
-                            description="A dedicated team committed to quality, precision, and customer satisfaction."
-                            color={ORANGE}
-                        />
-                    </div>
-                </div>
-
-                {/* RIGHT — Two Image Modern Layout */}
-                <div className="relative w-full flex justify-center lg:justify-end mt-16 sm:mt-20 lg:mt-0">
-                    <div className="relative w-full max-w-lg sm:max-w-xl lg:max-w-2xl" style={{ minHeight: "420px" }}>
-
-                        {/* Decorative background accent */}
-                        <div
-                            className="absolute -top-5 -left-5 w-2/3 h-2/3 rounded-2xl opacity-20 -z-10"
-                            style={{ backgroundColor: "#fff" }}
-                        />
-
-                        {/* Primary image — larger, top-left */}
-                        <div className="relative z-10 w-[72%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="a1.jpg"
-                                alt="Tom at work"
-                                className="w-full h-72 sm:h-96 md:h-104 lg:h-112 object-cover"
-                            />
-                            {/* Subtle orange bottom bar */}
-                            <div
-                                className="h-2 w-full"
-                                style={{ backgroundColor: ORANGE }}
-                            />
+                        {/* Eyebrow label */}
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="w-8 h-0.5" style={{ backgroundColor: ORANGE }} />
+                            <span className="text-sm font-semibold tracking-widest uppercase text-gray-700">
+                                Get to know us
+                            </span>
                         </div>
 
-                        {/* Secondary image — overlapping bottom-right */}
-                        <div
-                            className="absolute bottom-0 right-0 z-20 w-[56%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
-                            style={{ transform: "translateY(10%)" }}
-                        >
-                            <img
-                                src="a2.jpg"
-                                alt="Workshop detail"
-                                className="w-full h-48 sm:h-60 md:h-64 lg:h-72 object-cover"
-                            />
-                            {/* Badge overlay */}
-                            <div
-                                className="absolute top-3 left-3 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
-                                style={{ backgroundColor: ORANGE }}
-                            >
-                                20+ Years
-                            </div>
-                        </div>
+                        {/* Heading */}
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
+                            Meet Tom, <br className="hidden sm:block" />
+                            the founder
+                        </h2>
 
-                        {/* Floating dot grid decoration */}
-                        <div className="absolute -bottom-6 -left-6 grid grid-cols-4 gap-2 opacity-30 -z-10">
-                            {Array.from({ length: 16 }).map((_, i) => (
-                                <div
-                                    key={i}
-                                    className="w-2.5 h-2.5 rounded-full bg-white"
+                        {/* Body copy */}
+                        <p className="mt-5 text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
+                            I completed my mechanical apprenticeship over 20 years ago at Godfrey Davies Peugeot, Nottingham. I then went on to work for Honda, receiving some of the best technical training the industry has to offer.
+                        </p>
+
+                        {/* Stats grid */}
+                        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 sm:gap-x-12 sm:gap-y-12">
+                            <CounterBlock
+                                value={counts.experience}
+                                symbol="+"
+                                label="Years of Experience"
+                                description="Trusted, professional service built on decades of hands-on expertise."
+                                color={ORANGE}
+                            />
+                            <CounterBlock
+                                value={counts.projects}
+                                symbol="+"
+                                label="Completed Projects"
+                                description="Successfully delivered across a wide range of clients and requirements."
+                                color={ORANGE}
+                            />
+                            <CounterBlock
+                                value={counts.clients}
+                                symbol="+"
+                                label="Total Clients"
+                                description="A growing base of satisfied clients who trust us with their vehicles."
+                                color={ORANGE}
+                            />
+                            <CounterBlock
+                                value={counts.team}
+                                label="Team Members"
+                                description="A tight-knit team committed to quality, precision, and care."
+                                color={ORANGE}
+                            />
+                        </div>
+                    </div>
+
+                    {/* ── RIGHT — Two Image Layout ── */}
+                    {/*
+                        pb-* on the wrapper gives the secondary image
+                        (which translateY's downward) space to breathe
+                        without clipping or overlapping the section edge.
+                    */}
+                    <div className="relative w-full flex justify-center lg:justify-end pt-6 pb-20 sm:pb-24 lg:py-10">
+                        <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+
+                            {/* Soft tinted accent behind primary image */}
+                            <div
+                                className="absolute -top-5 -left-5 w-3/4 h-3/4 rounded-3xl -z-10"
+                                style={{ backgroundColor: "rgba(255,255,255,0.15)" }}
+                            />
+
+                            {/* Primary image — top-left, taller */}
+                            <div className="relative z-10 w-[70%] rounded-2xl overflow-hidden shadow-2xl border-[5px] border-white">
+                                <img
+                                    src="a2.jpg"
+                                    alt="Tom at work"
+                                    className="w-full object-cover"
+                                    style={{ height: "clamp(240px, 42vw, 440px)" }}
                                 />
-                            ))}
+                                <div className="h-2 w-full" style={{ backgroundColor: ORANGE }} />
+                            </div>
+
+                            {/* Secondary image — overlapping bottom-right */}
+                            <div
+                                className="absolute bottom-0 right-0 z-20 w-[58%] rounded-2xl overflow-hidden shadow-2xl border-[5px] border-white"
+                                style={{ transform: "translateY(28%)" }}
+                            >
+                                <img
+                                    src="a1.jpg"
+                                    alt="Workshop detail"
+                                    className="w-full object-cover"
+                                    style={{ height: "clamp(200px, 32vw, 290px)" }}
+                                />
+
+                                {/* Orange badge */}
+                                <div
+                                    className="absolute top-3 left-3 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
+                                    style={{ backgroundColor: ORANGE }}
+                                >
+                                    20+ Years
+                                </div>
+                            </div>
+
+                            {/* Dot grid decoration */}
+                            <div className="absolute -bottom-3 -left-5 grid grid-cols-5 gap-2 opacity-25 -z-10">
+                                {Array.from({ length: 20 }).map((_, i) => (
+                                    <div key={i} className="w-2 h-2 rounded-full bg-white" />
+                                ))}
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -168,19 +180,21 @@ export default function OurNumbers() {
 function CounterBlock({ value, symbol, label, description, color }) {
     return (
         <div>
-            <h3 className="text-4xl sm:text-5xl font-bold flex items-baseline">
+            <h3 className="text-4xl sm:text-5xl font-extrabold flex items-baseline leading-none">
                 {value}
-                <span
-                    className="text-4xl sm:text-5xl font-bold ml-1"
-                    style={{ color }}
-                >
-                    {symbol}
-                </span>
+                {symbol && (
+                    <span
+                        className="text-4xl sm:text-5xl font-extrabold ml-0.5"
+                        style={{ color }}
+                    >
+                        {symbol}
+                    </span>
+                )}
             </h3>
-            <p className="font-semibold mt-1 text-gray-800 uppercase text-xs tracking-wider">
+            <p className="mt-2 font-bold text-gray-800 uppercase text-xs tracking-widest">
                 {label}
             </p>
-            <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+            <p className="mt-1.5 text-sm text-gray-500 leading-relaxed">
                 {description}
             </p>
         </div>
