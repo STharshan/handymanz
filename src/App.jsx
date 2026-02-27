@@ -17,6 +17,7 @@ import Services from "./page/ServicePage/Services";
 import Gear from "./page/ServicePage/Gear";
 import Clutch from "./page/ServicePage/Clutch";
 import Diagnostic from "./page/ServicePage/Diagnostic";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   // 4. Initialize AOS
@@ -31,6 +32,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

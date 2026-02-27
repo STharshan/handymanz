@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function AirConHero() {
   return (
     <section
-      className="py-16 transition-colors duration-300 bg-linear-to-b"
+      className="py-16 h-screen transition-colors duration-300 bg-linear-to-b"
       style={{
         background: "linear-gradient(to bottom, #FFF7ED, #FED7AA)", // orange-50 → orange-200
       }}
@@ -13,7 +13,7 @@ export default function AirConHero() {
         <div className="text-center mb-12">
           {/* Badge */}
           <span
-            className="inline-flex mt-30 items-center justify-center rounded-md px-2 py-1 text-xs font-medium mb-4"
+            className="inline-flex mt-50 items-center justify-center rounded-md px-2 py-1 text-xs font-medium mb-4"
             style={{
               backgroundColor: "#FED7AA", // orange-200
               color: "#9A3412", // orange-800
