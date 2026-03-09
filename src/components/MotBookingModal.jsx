@@ -10,14 +10,14 @@ function MOTBookingModal({ isOpen, onClose }) {
   });
 
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
   const today = new Date().toISOString().split("T")[0];
+
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
   const isValid = formData.name && formData.phone && formData.vehicle && formData.date && formData.time;
 
@@ -31,59 +31,30 @@ function MOTBookingModal({ isOpen, onClose }) {
     setFormData({ name: "", phone: "", email: "", vehicle: "", date: "", time: "", message: "" });
   };
 
-  const inputStyle = {
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    color: "#e5e5e5",
-    caretColor: "#f97316",
-    colorScheme: "dark",
-  };
-  const onFocus = (e) => {
-    e.target.style.border = "1px solid rgba(249,115,22,0.6)";
-    e.target.style.background = "rgba(249,115,22,0.04)";
-    e.target.style.boxShadow = "0 0 0 3px rgba(249,115,22,0.1)";
-  };
-  const onBlur = (e) => {
-    e.target.style.border = "1px solid rgba(255,255,255,0.1)";
-    e.target.style.background = "rgba(255,255,255,0.05)";
-    e.target.style.boxShadow = "none";
-  };
-
   return (
     <div
-      className="fixed inset-0 z-9999 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.80)", backdropFilter: "blur(8px)" }}
+      className="fixed inset-0 z-9999 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div
-        className="relative w-full max-w-lg rounded-2xl shadow-2xl"
-        style={{
-          background: "linear-gradient(160deg, #1c1c1c 0%, #111 100%)",
-          border: "1px solid rgba(249,115,22,0.25)",
-          maxHeight: "92vh",
-          overflowY: "auto",
-        }}
-      >
+      <div className="relative w-full max-w-lg rounded-2xl shadow-2xl bg-linear-to-tr from-gray-900 to-black border border-orange-600/25 max-h-[92vh] overflow-y-auto">
+
         {/* Header */}
-        <div className="px-6 pt-6 pb-4" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="px-6 pt-6 pb-4 border-b border-white/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ background: "rgba(249,115,22,0.15)", border: "1px solid rgba(249,115,22,0.35)" }}>
-                <Calendar size={18} color="#f97316" />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-orange-500/15 border border-orange-500/35">
+                <Calendar size={18} className="text-orange-500" />
               </div>
               <div>
-                <h2 className="font-bold text-lg leading-tight" style={{ color: "#fff" }}>Book Your MOT</h2>
-                <p className="text-xs mt-0.5" style={{ color: "#666" }}>ACG – Auto Centre, Nottingham</p>
+                <h2 className="font-bold text-lg text-white">Book Your MOT</h2>
+                <p className="text-xs mt-0.5 text-gray-500">ACG – Auto Centre, Nottingham</p>
               </div>
             </div>
-            <button onClick={onClose}
-              className="w-8 h-8 rounded-lg flex items-center justify-center transition-all"
-              style={{ background: "rgba(255,255,255,0.05)" }}
-              onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.12)"}
-              onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.05)"}
+            <button
+              onClick={onClose}
+              className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 hover:bg-white/12 transition"
             >
-              <X size={15} color="#888" />
+              <X size={15} className="text-gray-400" />
             </button>
           </div>
         </div>
@@ -93,110 +64,99 @@ function MOTBookingModal({ isOpen, onClose }) {
 
           {/* Row 1: Name + Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Full Name <span style={{ color: "#f97316" }}>*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><User size={14} color="#f97316" /></div>
-                <input type="text" name="name" value={formData.name} onChange={handleChange}
-                  placeholder="Your full name" required
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Phone Number <span style={{ color: "#f97316" }}>*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><PhoneCall size={14} color="#f97316" /></div>
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
-                  placeholder="07xxx xxxxxx" required
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
+            <InputField
+              icon={<User size={14} className="text-orange-500" />}
+              label="Full Name"
+              required
+              name="name"
+              placeholder="Your full name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <InputField
+              icon={<PhoneCall size={14} className="text-orange-500" />}
+              label="Phone Number"
+              required
+              name="phone"
+              placeholder="07xxx xxxxxx"
+              value={formData.phone}
+              onChange={handleChange}
+            />
           </div>
 
           {/* Row 2: Email + Vehicle */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Email <span style={{ color: "#555", fontWeight: 400 }}>(optional)</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><Mail size={14} color="#f97316" /></div>
-                <input type="email" name="email" value={formData.email} onChange={handleChange}
-                  placeholder="your@email.com"
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Vehicle Registration <span style={{ color: "#f97316" }}>*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><Car size={14} color="#f97316" /></div>
-                <input type="text" name="vehicle" value={formData.vehicle} onChange={handleChange}
-                  placeholder="e.g. AB12 CDE" required
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={{ ...inputStyle, textTransform: "uppercase" }} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
+            <InputField
+              icon={<Mail size={14} className="text-orange-500" />}
+              label="Email"
+              name="email"
+              placeholder="your@email.com"
+              value={formData.email}
+              onChange={handleChange}
+              type="email"
+            />
+            
+            <InputField
+              icon={<Car size={14} className="text-orange-500" />}
+              label="Vehicle Registration"
+              required
+              name="vehicle"
+              placeholder="AB12 CDE"
+              value={formData.vehicle}
+              onChange={handleChange}
+            />
           </div>
 
           {/* Row 3: Date + Time */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Preferred Date <span style={{ color: "#f97316" }}>*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><Calendar size={14} color="#f97316" /></div>
-                <input type="date" name="date" value={formData.date} onChange={handleChange}
-                  min={today} required
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-                Preferred Time <span style={{ color: "#f97316" }}>*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"><Clock size={14} color="#f97316" /></div>
-                <input type="time" name="time" value={formData.time} onChange={handleChange}
-                  min="08:30" max="17:00" required
-                  className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all"
-                  style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
-              </div>
-            </div>
+            <InputField
+              icon={<Calendar size={14} className="text-orange-500" />}
+              label="Preferred Date"
+              required
+              name="date"
+              type="date"
+              min={today}
+              value={formData.date}
+              onChange={handleChange}
+            />
+            <InputField
+              icon={<Clock size={14} className="text-orange-500" />}
+              label="Preferred Time"
+              required
+              name="time"
+              type="time"
+              min="08:30"
+              max="17:00"
+              value={formData.time}
+              onChange={handleChange}
+            />
           </div>
 
           {/* Hours hint */}
-          <div className="rounded-xl px-4 py-2.5 flex items-center gap-2"
-            style={{ background: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.15)" }}>
-            <Clock size={12} color="#f97316" className="shrink-0" />
-            <p className="text-xs" style={{ color: "#aaa" }}>
-              <span className="font-semibold" style={{ color: "#f97316" }}>Hours:</span>{" "}
-              Mon–Fri 8:30am–5:30pm &middot; Sat 9:00am–3:00pm &middot; Sun Closed
+          <div className="rounded-xl px-4 py-2.5 flex items-center gap-2 bg-orange-500/6 border border-orange-500/15">
+            <Clock size={12} className="text-orange-500 shrink-0" />
+            <p className="text-xs text-gray-400">
+              <span className="font-semibold text-orange-500">Hours:</span> Mon–Fri 8:30am–5:30pm &middot; Sat 9:00am–3:00pm &middot; Sun Closed
             </p>
           </div>
 
           {/* Notes */}
           <div>
-            <label className="block text-xs font-semibold mb-1.5" style={{ color: "#999" }}>
-              Additional Notes <span style={{ color: "#555", fontWeight: 400 }}>(optional)</span>
+            <label className="block text-xs font-semibold mb-1.5 text-gray-400">
+              Additional Notes <span className="text-gray-500 font-normal">(optional)</span>
             </label>
             <div className="relative">
-              <div className="absolute left-3 top-3 pointer-events-none"><MessageSquare size={14} color="#f97316" /></div>
-              <textarea name="message" value={formData.message} onChange={handleChange}
+              <div className="absolute left-3 top-3 pointer-events-none">
+                <MessageSquare size={14} className="text-orange-500" />
+              </div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Any specific concerns, make/model, or special requests..."
                 rows={3}
-                className="w-full pl-9 pr-3 py-3 rounded-xl text-sm outline-none transition-all resize-none"
-                style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
+                className="w-full pl-9 pr-3 py-3 rounded-xl text-sm bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all resize-none"
+              />
             </div>
           </div>
 
@@ -204,24 +164,38 @@ function MOTBookingModal({ isOpen, onClose }) {
           <button
             onClick={handleSubmit}
             disabled={!isValid}
-            className="w-full py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300"
-            style={{
-              background: isValid ? "linear-gradient(135deg, #25D366, #128C7E)" : "rgba(255,255,255,0.07)",
-              color: isValid ? "#fff" : "#444",
-              cursor: isValid ? "pointer" : "not-allowed",
-              boxShadow: isValid ? "0 6px 24px rgba(37,211,102,0.3)" : "none",
-            }}
-            onMouseEnter={e => { if (isValid) e.currentTarget.style.filter = "brightness(1.1)"; }}
-            onMouseLeave={e => { if (isValid) e.currentTarget.style.filter = "brightness(1)"; }}
+            className={`w-full py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300
+              ${isValid ? "bg-linear-to-tr from-green-500 to-teal-700 text-white shadow-lg hover:brightness-110" : "bg-white/7 text-gray-600 cursor-not-allowed"}
+            `}
           >
             <FaWhatsapp size={18} />
             Send Booking via WhatsApp
           </button>
 
-          <p className="text-xs text-center" style={{ color: "#3a3a3a" }}>
+          <p className="text-xs text-center text-gray-500">
             This opens WhatsApp with your details pre-filled. By submitting you agree to us processing your details to respond to your enquiry.
           </p>
         </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Input Field Component ──────────────────────────────────────
+function InputField({ icon, label, optional, ...props }) {
+  return (
+    <div>
+      <label className="block text-xs font-semibold mb-1.5 text-gray-400">
+        {label} {optional ? <span className="text-gray-500 font-normal">(optional)</span> : <span className="text-orange-500">*</span>}
+      </label>
+      <div className="relative">
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+          {icon}
+        </div>
+        <input
+          className={`w-full pl-9 pr-3 py-3 text-sm rounded-xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all ${props.className || ""}`}
+          {...props}
+        />
       </div>
     </div>
   );

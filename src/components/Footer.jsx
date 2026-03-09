@@ -83,7 +83,7 @@ export default function Footer() {
                   href="tel:+447752364546"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  0775 236 4546
+                  +44 775 236 4546
                 </a>
               </li>
 

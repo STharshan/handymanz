@@ -58,7 +58,7 @@ export default function ContactSection() {
                                     href={`tel:${whatsappNumber}`}
                                     className="text-[18px] text-black dark:text-gray-200 font-semibold hover:opacity-80 transition-colors"
                                 >
-                                    {whatsappNumber}
+                                    +44 775 236 4546
                                 </a>
                             </div>
 

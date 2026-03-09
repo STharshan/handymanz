@@ -133,6 +133,7 @@ export default function OurNumbers() {
                             <div className="relative z-10 w-[70%] rounded-2xl overflow-hidden shadow-2xl border-[5px] border-white">
                                 <img
                                     src="a2.jpg"
+                                    loading="lazy"
                                     alt="Tom at work"
                                     className="w-full object-cover"
                                     style={{ height: "clamp(240px, 42vw, 440px)" }}
@@ -147,6 +148,7 @@ export default function OurNumbers() {
                             >
                                 <img
                                     src="a1.jpg"
+                                    loading="lazy"
                                     alt="Workshop detail"
                                     className="w-full object-cover"
                                     style={{ height: "clamp(200px, 32vw, 290px)" }}

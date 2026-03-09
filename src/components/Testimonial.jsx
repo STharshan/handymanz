@@ -41,18 +41,6 @@ Tom and his colleague were both incredibly welcome and offered unmatched and eff
 const TestimonialsSection = () => {
     const [paused, setPaused] = useState(false);
 
-    // smooth Scroll Function
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            const offsetTop = section.offsetTop - 80; // adjust for navbar height
-            window.scrollTo({
-                top: offsetTop,
-                behavior: "smooth",
-            });
-        }
-    };
-
     return (
         <section
             id="testimonials"
@@ -80,8 +68,8 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* UPDATED BUTTON WITH SCROLL */}
-                <button
-                    onClick={() => scrollToSection("contact")}
+                <a
+                    href="#contact"
                     data-aos="zoom-in"
                     data-aos-delay="200"
                     className="mt-8 md:mt-0 flex items-center gap-2 bg-orange-500 hover:bg-[#868386] text-white font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
@@ -97,7 +85,7 @@ const TestimonialsSection = () => {
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                </button>
+                </a>
             </div>
 
             {/* Top Row */}

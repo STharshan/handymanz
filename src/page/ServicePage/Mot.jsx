@@ -1,4 +1,3 @@
-import React from "react";
 import AirConHero from "../../components/ServicePage/MotPage/AirConHero";
 import AirConServices from "../../components/ServicePage/MotPage/AirConServices";
 import WhyServiceAirConditioning from "../../components/ServicePage/MotPage/WhyServiceAirConditioning";
