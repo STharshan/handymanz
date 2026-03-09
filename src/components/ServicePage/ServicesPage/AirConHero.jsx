@@ -1,87 +1,81 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+// ─── Hero Section ─────────────────────────────────────────────
 export default function AirConHero() {
+
   return (
-    <section
-      className="py-16 h-screen transition-colors duration-300 bg-linear-to-b"
-      style={{
-        background: "linear-gradient(to bottom, #FFF7ED, #FED7AA)", // orange-50 → orange-200
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          {/* Badge */}
+    <>
+      <section
+        className="min-h-screen flex items-center justify-center py-20 px-4 transition-colors duration-300"
+        style={{ background: "linear-gradient(to bottom, #FFF7ED, #FED7AA)" }}
+      >
+        <div className="max-w-7xl mx-auto text-center">
+
+          {/* Tag */}
           <span
-            className="inline-flex mt-50 items-center justify-center rounded-md px-2 py-0.5 text-xs font-medium mb-4"
-            style={{
-              backgroundColor: "#FED7AA", // orange-200
-              color: "#9A3412", // orange-800
-            }}
+            className="inline-flex items-center justify-center rounded-md px-3 py-1 text-xs font-semibold mb-6"
+            style={{ backgroundColor: "#FED7AA", color: "#9A3412" }}
           >
             Professional Vehicle Services
           </span>
 
           {/* Heading */}
           <h1
-            className="text-4xl lg:text-5xl font-black mb-6"
-            style={{ color: "#7C2D12" }} // orange-900
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight"
+            style={{ color: "#7C2D12" }}
           >
             Reliable Automotive Care You Can Trust
+      
           </h1>
 
-          {/* Subheading */}
+          {/* Paragraph */}
           <p
-            className="text-xl max-w-3xl mx-auto leading-relaxed"
-            style={{ color: "#9A3412" }} // orange-800
+            className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            style={{ color: "#9A3412" }}
           >
-            At ACG – Auto Centre, we provide a full range of professional vehicle services to keep your car safe, reliable, and performing at its best. From routine maintenance to complex mechanical repairs, our experienced technicians deliver high-quality workmanship at competitive prices.
+           At ACG – Auto Centre, we provide a full range of professional vehicle services to keep your car safe, reliable, and performing at its best. From routine maintenance to complex mechanical repairs, our experienced technicians deliver high-quality workmanship at competitive prices.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            {/* Call Button */}
-            <a
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+
+            {/* Book Appointment */}
+              <a
               href="https://wa.me/447752364546"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
+              rel="noopener noreferrer"          
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              style={{ backgroundColor: "#F97316", color: "#FFFFFF" }}
             >
-              <button
-                className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: "#F97316", // orange-500
-                  color: "#FFFFFF",
-                }}
-              >
-                <FaWhatsapp className="h-5 w-5" />
-                Book an Appoinment
-              </button>
+              <FaWhatsapp className="h-5 w-5" />
+              Book an Appointment
             </a>
 
-            {/* Get Quote Button */}
+            {/* Quote Button */}
             <Link
               to="/#contact"
-              className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg font-semibold transition-all duration-300"
               style={{
-                backgroundColor: "#FFF7ED", // orange-50
+                backgroundColor: "#FFF7ED",
                 color: "#7C2D12",
-                border: "1px solid #FB923C", // orange-400
+                border: "1px solid #FB923C",
                 textDecoration: "none",
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow =
-                  "0 0 0 3px rgba(249,115,22,0.4)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "none";
-              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.boxShadow =
+                  "0 0 0 3px rgba(249,115,22,0.4)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.boxShadow = "none")
+              }
             >
               Get A Quote
             </Link>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
