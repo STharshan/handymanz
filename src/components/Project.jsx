@@ -7,86 +7,14 @@ const ProjectShowcase = () => {
   const scrollContainerRef = useRef(null);
 
   const projects = [
-    {
-      id: "1",
-      title: "Flooring Makeover Project",
-      category: "Maintenance Projects",
-      snippet:
-        "The Flooring Makeover Project involved installing new flooring throughout the residential property owned by Mr. and Mrs. Garcia, enhancing durability and aesthetics.",
-      image:
-        "Acg 2.jpg",
-      link: "/projects/flooring-makeover-project",
-    },
-    {
-      id: "2",
-      title: "Fixture Fixer Operation",
-      category: "Maintenance Projects",
-      snippet:
-        "The Fixture Fixer Operation aimed to repair and replace various fixtures in the commercial property of ABC Restaurant, ensuring a welcoming and functional environment for patrons.",
-      image:
-        "ACG 3.jpg",
-      link: "/projects/fixture-fixer-operation",
-    },
-    {
-      id: "3",
-      title: "Renovation Revamp Venture",
-      category: "Plumbing Projects",
-      snippet:
-        "The Renovation Revamp Venture focused on transforming the outdated kitchen and bathrooms of the Johnson family's home, enhancing functionality and modernizing the living spaces.",
-      image:
-        "ACG 4.jpg",
-      link: "/projects/renovation-revamp-venture",
-    },
-    {
-      id: "4",
-      title: "Carpentry Solutions Project",
-      category: "Electrical Projects",
-      snippet:
-        "The Carpentry Solutions Project aimed to provide customized carpentry solutions for the office renovation project of Ms. Rodriguez, adding functionality and aesthetic appeal to the workspace.",
-      image:
-        "ACG 5.jpg",
-      link: "/projects/carpentry-solutions-project",
-    },
-    {
-      id: "5",
-      title: "Electrical Upgrade Initiative",
-      category: "Electrical Projects",
-      snippet:
-        "The Electrical Upgrade Initiative focused on enhancing the electrical systems in the commercial space of XYZ Corporation, improving safety and efficiency.",
-      image:
-        "ACG6.jpg",
-      link: "/projects/electrical-upgrade-initiative",
-    },
-    {
-      id: "6",
-      title: "Plumbing Rescue Mission",
-      category: "Plumbing Projects",
-      snippet:
-        "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
-      image:
-        "ACG7.jpg",
-      link: "/projects/plumbing-rescue-mission",
-    },
-       {
-      id: "7",
-      title: "Plumbing Rescue Mission",
-      category: "Plumbing Projects",
-      snippet:
-        "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
-      image:
-        "ACG9.jpg",
-      link: "/projects/plumbing-rescue-mission",
-    },
-       {
-      id: "8",
-      title: "Plumbing Rescue Mission",
-      category: "Plumbing Projects",
-      snippet:
-        "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
-      image:
-        "acg11.jpg",
-      link: "/projects/plumbing-rescue-mission",
-    },
+    { id: "1", image: "Acg 2.jpg" },
+    { id: "2", image: "ACG 3.jpg" },
+    { id: "3", image: "ACG 4.jpg" },
+    { id: "4", image: "ACG 5.jpg" },
+    { id: "5", image: "ACG6.jpg" },
+    { id: "6", image: "ACG7.jpg" },
+    { id: "7", image: "ACG9.jpg" },
+    { id: "8", image: "acg11.jpg" },
   ];
 
   const scrollToCard = (index) => {
@@ -171,26 +99,7 @@ const ProjectShowcase = () => {
             </h1>
           </div>
 
-          <div className="grid items-center gap-3 sm:gap-4 mt-10">
-            {/* <button
-              onClick={handlePrev}
-              disabled={activeIndex === 3}
-              className="
-                bg-orange-600 hover:bg-orange-700
-                text-white
-                w-40
-                px-4 py-3
-                rounded-md
-                text-sm
-                font-semibold
-                transition-all
-                duration-200
-                shadow-sm hover:shadow-md
-              "
-            >
-              View Projects
-            </button> */}
-
+          <div className="grid items-center gap-3 sm:gap-4 lg:mt-35">
             <div className="flex gap-2">
               <button
                 onClick={handlePrev}
@@ -245,6 +154,7 @@ const ProjectShowcase = () => {
                 >
                   <img
                     src={project.image}
+                    loading="lazy"
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

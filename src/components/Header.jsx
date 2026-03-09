@@ -134,6 +134,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center shrink-0">
               <img
+              loading="lazy"
                 src="logo.png"
                 alt="ACG AutoCentre"
                 className="h-12 sm:h-14 lg:h-16 bg-black p-2 rounded-full"

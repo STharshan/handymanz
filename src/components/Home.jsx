@@ -134,6 +134,7 @@ export default function HandymanHero() {
               <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
 
                 <img
+                loading="lazy"
                   src="/ACG 1.jpg"
                   alt="Auto Centre"
                   className="w-full h-full object-cover object-center rounded-2xl"

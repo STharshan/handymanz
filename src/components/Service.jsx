@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
-  const [animatingWords] = useState(['Carpentry', 'Plumbing', 'Repairs']);
+  const [animatingWords] = useState(['MOT', 'Alignment', 'Diagnostics']);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   const services = [
@@ -20,7 +20,7 @@ const ServicesSection = () => {
     },
     {
       title: "Services",
-      description: "Our comprehensive repair services cover a wide range of household needs, including plumbing, electrical work, drywall repairs, and door/window maintenance.",
+      description: "Our comprehensive repair and maintenance services cover all your vehicle needs, from routine servicing and MOT testing to wheel alignment, clutch and gearbox repairs, and full diagnostics.",
       image: "w1.webp",
       link: "/service"
     },
@@ -67,7 +67,7 @@ const ServicesSection = () => {
               <span className="text-orange-600">& maintenance services</span>
             </h2>
             {/* Animated word — only show on larger screens to avoid layout issues */}
-            <div className="relative h-12 sm:h-14 md:h-16 lg:h-20 overflow-hidden hidden sm:block min-w-[180px]">
+            <div className="relative h-12 sm:h-14 md:h-16 lg:h-20 overflow-hidden hidden sm:block min-w-[380px]">
               {animatingWords.map((word, index) => (
                 <h2
                   key={word}
@@ -118,6 +118,7 @@ const ServiceCard = ({ service }) => {
       <img
         src={service.image}
         alt={service.title}
+        loading="lazy"
         className={`w-full h-[300px] sm:h-[380px] md:h-[430px] object-cover transition-transform duration-700 ${
           isActive ? 'scale-110' : 'scale-100'
         }`}
