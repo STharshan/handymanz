@@ -19,7 +19,7 @@ export default function AirConHero() {
         className="min-h-screen flex items-center justify-center py-20 px-4 transition-colors duration-300"
         style={{ background: "linear-gradient(to bottom, #FFF7ED, #FED7AA)" }}
       >
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center pt-20">
 
           {/* Tag */}
           <span
