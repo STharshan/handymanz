@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MOTBookingModal from "../../MotBookingModal";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // ─── Hero Section ─────────────────────────────────────────────
 export default function AirConHero() {
@@ -70,8 +71,8 @@ export default function AirConHero() {
             </button>
 
             {/* Quote Button */}
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               className="inline-flex items-center justify-center px-7 py-3 rounded-lg font-semibold transition-all duration-300"
               style={{
                 backgroundColor: "#FFF7ED",
@@ -88,7 +89,7 @@ export default function AirConHero() {
               }
             >
               Get A Quote
-            </a>
+            </Link>
 
           </div>
         </div>

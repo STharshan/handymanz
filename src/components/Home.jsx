@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import MOTBookingModal from "../components/MotBookingModal"
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function HandymanHero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,11 +39,10 @@ export default function HandymanHero() {
 
             {/* LEFT CONTENT */}
             <div
-              className={`space-y-6 lg:space-y-8 transition-all duration-1000 transform ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-10"
-              }`}
+              className={`space-y-6 lg:space-y-8 transition-all duration-1000 transform ${isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+                }`}
             >
               <h1 className="text-5xl font-bold text-white leading-tight">
                 <span className="text-orange-500">ACG – Auto Centre</span>
@@ -69,24 +69,21 @@ export default function HandymanHero() {
                       <span>Book MOT Now</span>
 
                       <ArrowRight
-                        className={`transition-all duration-300 ${
-                          buttonHover
-                            ? "translate-x-1 scale-110"
-                            : "translate-x-0 scale-100"
-                        }`}
+                        className={`transition-all duration-300 ${buttonHover
+                          ? "translate-x-1 scale-110"
+                          : "translate-x-0 scale-100"
+                          }`}
                         size={20}
                       />
                     </span>
                   </div>
 
                   <div
-                    className={`absolute inset-0 rounded-lg bg-orange-500 blur-xl transition-opacity duration-300 ${
-                      buttonHover ? "opacity-50" : "opacity-0"
-                    } -z-10`}
+                    className={`absolute inset-0 rounded-lg bg-orange-500 blur-xl transition-opacity duration-300 ${buttonHover ? "opacity-50" : "opacity-0"
+                      } -z-10`}
                   ></div>
                 </button>
-
-                {/* WHATSAPP BUTTON */}
+                
                 <a
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
@@ -97,27 +94,22 @@ export default function HandymanHero() {
                 >
                   <div className="relative overflow-hidden bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                     <span className="relative z-10 flex items-center gap-2">
-                      <svg
-                        className={`transition-all duration-300 ${
-                          whatsappHover ? "scale-110 rotate-12" : ""
-                        }`}
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487" />
-                      </svg>
+
+                      {/* React-Icons replaces your manual SVG path */}
+                      <FaWhatsapp
+                        size={20}
+                        className={`transition-all duration-300 ${whatsappHover ? "scale-110 rotate-12" : ""
+                          }`}
+                      />
 
                       <span
-                        className={`transition-all duration-300 ${
-                          whatsappHover ? "opacity-0 -translate-y-full" : ""
-                        }`}
+                        className={`transition-all duration-300 ${whatsappHover ? "opacity-0 -translate-y-full" : ""
+                          }`}
                       >
                         WhatsApp
                       </span>
 
-                      <span
+                        <span
                         className={`absolute left-8 top-0 transition-all duration-300 ${
                           whatsappHover
                             ? "opacity-100 translate-y-0"
@@ -134,11 +126,10 @@ export default function HandymanHero() {
 
             {/* RIGHT IMAGE */}
             <div
-              className={`relative transition-all duration-1000 delay-300 transform ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-10"
-              }`}
+              className={`relative transition-all duration-1000 delay-300 transform ${isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+                }`}
             >
               <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
 

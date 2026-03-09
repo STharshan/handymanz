@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3">
               <span className="text-2xl font-bold bg-orange-500 bg-clip-text text-transparent">
-                ACG <span className="text-gray-400">Auto Centre</span>
+                ACG <span className="text-gray-400">AutoCentre</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4 mt-3 leading-relaxed">
@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* Bottom Divider */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ACG Auto Centre. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ACG AutoCentre. All rights reserved.</p>
         </div>
 
         {/* Bottom Bar */}

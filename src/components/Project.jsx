@@ -54,7 +54,7 @@ const ProjectShowcase = () => {
       snippet:
         "The Electrical Upgrade Initiative focused on enhancing the electrical systems in the commercial space of XYZ Corporation, improving safety and efficiency.",
       image:
-        "ACG 6.jpg",
+        "ACG6.jpg",
       link: "/projects/electrical-upgrade-initiative",
     },
     {
@@ -64,7 +64,7 @@ const ProjectShowcase = () => {
       snippet:
         "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
       image:
-        "ACG 7.jpg",
+        "ACG7.jpg",
       link: "/projects/plumbing-rescue-mission",
     },
        {
@@ -74,7 +74,7 @@ const ProjectShowcase = () => {
       snippet:
         "The 'Plumbing Rescue Mission' project aimed to address extensive plumbing issues in the residential property of Mr. and Mrs. Thompson. The project's goal was to restore functionality to the plumbing system while ensuring long-term reliability and customer satisfaction.",
       image:
-        "ACG 9.jpg",
+        "ACG9.jpg",
       link: "/projects/plumbing-rescue-mission",
     },
        {
@@ -172,7 +172,7 @@ const ProjectShowcase = () => {
           </div>
 
           <div className="grid items-center gap-3 sm:gap-4 mt-10">
-            <button
+            {/* <button
               onClick={handlePrev}
               disabled={activeIndex === 3}
               className="
@@ -189,7 +189,7 @@ const ProjectShowcase = () => {
               "
             >
               View Projects
-            </button>
+            </button> */}
 
             <div className="flex gap-2">
               <button

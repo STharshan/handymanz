@@ -105,7 +105,7 @@ const Header = () => {
             <div className="flex items-center space-x-2 sm:mt-0 mt-7">
               <img
                 src="logo.png"
-                alt="ACG Auto Centre"
+                alt="ACG AutoCentre"
                 className="h-16 bg-black p-2 rounded-full"
               />
             </div>

@@ -1,4 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function AirConHero() {
   return (
@@ -62,8 +63,8 @@ export default function AirConHero() {
             </a>
 
             {/* Get Quote Button */}
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all duration-300"
               style={{
                 backgroundColor: "#FFF7ED", // orange-50
@@ -80,7 +81,7 @@ export default function AirConHero() {
               }}
             >
               Get A Quote
-            </a>
+            </Link>
           </div>
         </div>
       </div>
