@@ -23,26 +23,27 @@ export default function EmergencyCTA() {
           DVSA-approved Wheel Alignment & Tracking carried out by experienced, qualified technicians
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
           {/* Call Button */}
-          <a href="tel:+447752364546" className="inline-block">
-            <button
-              className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold"
-              style={{
-                backgroundColor: palette.secondaryBg,
-                color: palette.secondaryText,
-              }}
-            >
-              <FaPhone className="h-5 w-5" />
-              Call +44775 236 4546
-            </button>
+          <a
+            href="tel:+447752364546"
+            className="inline-flex items-center justify-center gap-2 h-11 w-full sm:w-64 rounded-md font-semibold"
+            style={{
+              backgroundColor: palette.secondaryBg,
+              color: palette.secondaryText,
+            }}
+          >
+            <FaPhone className="h-5 w-5" />
+            Call +44775 236 4546
           </a>
 
           {/* Book Wheel Alignment & Tracking Button */}
           <a
             href="https://wa.me/94774279433"
             target="_blank"
-            className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-colors"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 h-11 w-full sm:w-64 rounded-md font-semibold transition-colors"
             style={{
               backgroundColor: "transparent",
               color: palette.fgOnPrimary,
@@ -59,6 +60,7 @@ export default function EmergencyCTA() {
           >
             Book Wheel Alignment & Tracking
           </a>
+
         </div>
       </div>
     </section>
